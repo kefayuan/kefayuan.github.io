@@ -5,3 +5,5 @@ theme:          jekyll-theme-cayman
 gem "github-pages", group: :jekyll_plugins
 metaDataFormat:   yaml
 
+kramdown:
+  html_to_native: true
