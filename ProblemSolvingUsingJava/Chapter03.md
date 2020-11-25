@@ -1,4 +1,8 @@
 ---
-layout: page
+layout: page_latex
 title: List & Stack
 ---
+ 
+Here, have some $$\pi$$.
+The greatest equation known to man is:
+$$e^{ix}=\cos{x} + i\sin{x}$$
