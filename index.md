@@ -1,8 +1,8 @@
 ---
 layout: default
 ---
-[Problem Solving Using Java](ProblemSolvingUsingJava/ProblemSolvingUsingJava.md)  
-[Spring5 Certification](Spring5Ceritifcation/Spring5Ceritifcation.md)  
+[Problem Solving Using Java](ProblemSolvingUsingJava/toc.md)  
+[Spring5 Certification](Spring5Ceritifcation/toc.md)  
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
