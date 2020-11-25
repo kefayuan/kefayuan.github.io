@@ -2,7 +2,7 @@
 layout: page
 title:  Big O 
 ---
-Many problems have more than one solutions. As of a software problem, it is more often that the problem has different algorithms to implement it, e.g. sort, there are many different sorting method, for a instance, the fllowing two code snippets.  
+Many problems have more than one solutions. As of a software problem, it is more often that the problem has different algorithms to implement it, e.g. sort. There are many different sorting methods, for a instance, the following two code snippets.  
 ```java
 public void bubbleSort(int[] arr) {  
     int n = arr.length;  
