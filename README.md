@@ -1,4 +1,4 @@
 # Books
 
-[a relative link](ProblemSolvingUsingJava.md)
-[a relative link](Spring5Ceritifcation.md)
+[a Problem Solving Using Java](ProblemSolvingUsingJava.md)
+[a Spring5 Certification](Spring5Ceritifcation.md)
