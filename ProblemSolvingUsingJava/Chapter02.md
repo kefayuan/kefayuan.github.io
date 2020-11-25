@@ -5,7 +5,7 @@ title: Array
 ![equ](https://latex.codecogs.com/gif.latex?log(y)=\beta_0&space;&plus;&space;\beta_1&space;x&space;&plus;&space;u)
 
 
-$$
+\[
 \begin{aligned}
   & \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
   = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \\
@@ -20,4 +20,9 @@ $$
       y_n
     \end{array} \right)
 \end{aligned}
-$$
+\]
+ 
+The following is a math block:$$ 5 + 5 $$
+
+But next comes a paragraph with an inline math statement:\$$ 5 + 5 $$
+another inline math statement:\( 5 + 5 \)
