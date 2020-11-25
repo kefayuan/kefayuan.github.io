@@ -6,5 +6,4 @@ gem "github-pages", group: :jekyll_plugins
 metaDataFormat:   yaml
 
 markdown: kramdown
-kramdown:
-  html_to_native: true
+
