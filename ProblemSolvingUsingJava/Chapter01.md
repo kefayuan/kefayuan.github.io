@@ -45,4 +45,6 @@ private int partition(int arr[], int begin, int end) {
     return i+1;
 }
 ```
-These two kinds of sorting can solve your problem, but which one is more efficent? How do you know without running the code to test it?
+These two kinds of sorting can solve your problem, but which one is more efficient? How do you know it without running the code to test it?  
+In computer science, the concept Complexity is used to analyze the efficiency: time complexity and space complexity. Time complexity describes the amount of time it takes to run an algorithm. Space complexity measures how much memory an algorithms needs when running an algorithm.  
+
