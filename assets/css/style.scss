@@ -1,6 +1,7 @@
-@import "{{ site.theme }}";
-
-header {
+.page-header {
   height: 100px;
   background-color: #9FE2BF;
 }
+@import "{{ site.theme }}";
+
+
