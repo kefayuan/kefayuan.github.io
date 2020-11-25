@@ -1,7 +1,8 @@
 languageCode:   en
-title:          Java's Garden
+title:          Kefa Yuan's Garden
+description:    This is a garden for java developer
 theme:          jekyll-theme-cayman
 
-
+gem "github-pages", group: :jekyll_plugins
 metaDataFormat:   yaml
 
