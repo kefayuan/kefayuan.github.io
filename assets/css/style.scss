@@ -1,7 +1,9 @@
-.header {
+---
+---
+@import "{{ site.theme }}";
+header {
   height: 100px;
   background-color: #9FE2BF;
 }
-@import "{{ site.theme }}";
 
 
