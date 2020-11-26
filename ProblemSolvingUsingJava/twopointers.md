@@ -44,6 +44,7 @@ Illustraion for  left-right-pointers
 ### Problem Types
  * part sum in ordered array
  * reverse array  
+ * binary search
  
 ### Problems
  * 167, 125, 344, 345, 11, 633 
