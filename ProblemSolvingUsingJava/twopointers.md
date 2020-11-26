@@ -49,7 +49,7 @@ Illustraion for  left-right-pointers
  * 167, 125, 344, 345, 11, 633 
  
 # Sliding-Window-Pointers
-Window is a collection of elements defined by start and end index in an array or a string, the start and end index are inclusive range, e.g. for index betwen i and j, [i,j], j-i is called distance. Sliding window slide with the fixed distance. If the window slide 1 element, the window index  range change from [i,j] to [i+1, j+1]. Using sliding window, the double nested loop can be converted into a single layer iteration, which change the 2-dimensional loop to 1-dimensional loop, this means the time complexity can be degraded from O(n2) to O(n).  
+Window is a collection of elements defined by start and end index in an array or a string, the start and end index are inclusive range, e.g. for index betwen i and j, [i,j], j-i is called distance. Sliding window slide with the fixed distance. If the window slide 1 element, the window index  range change from [i,j] to [i+1, j+1]. Using sliding window, the double nested loop can be converted into a single layer iteration, which change the 2-dimensional loop to 1-dimensional loop, this means the time complexity can be degraded from O(n<sup>2</sup>) to O(n).  
 Illustraion for sliding-window-pointers  
 
 ### Solution Template
