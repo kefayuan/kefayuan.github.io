@@ -58,6 +58,8 @@ These two kinds of sorting can solve your problem, but which one is more efficie
 In computer science, the concept Complexity is used to analyze the efficiency: time complexity and space complexity. Time complexity describes the amount of time it takes to run an algorithm. Space complexity measures how much memory an algorithms needs when running an algorithm.  
 
 # Tools
-
+> If a craftsman wants to do good work, he must first sharpen his tools.
+>
+> -- <cite>Confucius, The Analects</cite> 
 
 
