@@ -1,6 +1,6 @@
 ---
 layout: page_latex
-title: List & Stack
+title: Dynamic Planning
 ---
  
 Here, have some $$\pi$$.
