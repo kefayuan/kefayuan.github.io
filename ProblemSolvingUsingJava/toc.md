@@ -3,6 +3,6 @@ layout: page
 title:  Problem Solving Using Java 
 ---
 [Introduction](introduction.md)  
-[Array](array.md)  
-[List & Stack](liststack.md)  
+[Recursion and Iteration](recursion.md)  
+[Dynamic Planning](dp.md)  
 [Two Pointers](twopointers.md)
