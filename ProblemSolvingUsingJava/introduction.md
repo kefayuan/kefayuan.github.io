@@ -66,7 +66,7 @@ LinkedList, Stack and Queue, Hashing, String, Tree and Graph, Bit Manipulation
 
 # Principles
 
-Brutal, Two pointers, Sliding window,  
-Sort and Search
+Brutal, Two pointers,   
+Sort and Search  
 Greedy, Recursion, Backtracking,  DP  
-Divide and Conquer, DFS and BFS,
+Divide and Conquer, DFS and BFS,  
