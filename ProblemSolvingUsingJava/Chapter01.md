@@ -61,5 +61,12 @@ In computer science, the concept Complexity is used to analyze the efficiency: t
 > If a craftsman wants to do good work, he must first sharpen his tools.
 >
 > -- <cite>Confucius, The Analects</cite> 
+LinkedList, Stack and Queue, Hashing, String, Tree and Graph, Bit Manipulation
 
 
+# Principles
+
+Brutal, Two pointers, Sliding window,  
+Sort and Search
+Greedy, Recursion, Backtracking,  DP  
+Divide and Conquer, DFS and BFS,
