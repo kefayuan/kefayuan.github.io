@@ -12,5 +12,16 @@ Illustraion for fast-slow-pointers, left-right-pointers, and sliding-window-poin
 
 The basic idea for using two pointers:  
 1. initial locations  
-2. how the pointers move  
+2. move strategy 
 3. exit conditions for iteration  
+
+# Fast-Slow-Pointers
+The two pointers move from the same side. One moves fast, while the other move slow, e.g. the fast pointer move 2 steps each time, and the slow just 1 step. Both pointers move with the different move strategy until the two pointers point to the same element or other exit conditions.
+### Problem Types
+ * detect if a list contians cycle
+ * if a list contains cycle, find the start location of the cycle
+ * delete elements
+ * find the middle element in list
+ * find the last k element in list
+
+
