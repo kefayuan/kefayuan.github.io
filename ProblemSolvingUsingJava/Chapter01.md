@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  Tools and Measurement 
+title:   Measurement, Tools and Principles
 ---
 
 # Measurement
