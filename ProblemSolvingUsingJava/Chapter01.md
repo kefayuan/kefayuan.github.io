@@ -5,8 +5,8 @@ title:  Measurement of Code
 
 > If you can't measure it, you can't improve it.
 >
-> -- <cite>Peter Drucker</cite>
-CPR(Correctness, Performance, Readability)
+> -- <cite>Peter Drucker</cite>  
+Criteria:CPR(Correctness, Performance, Readability)  
 
 Many problems have more than one solutions. As of a software problem, it is more often that the problem has different algorithms to implement it, e.g. sort. There are many different sorting methods, for a instance, the following two code snippets.  
 ```java
