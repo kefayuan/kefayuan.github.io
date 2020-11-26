@@ -10,13 +10,19 @@ The two pointers in fast-slow-pointers move in the same direction, one fast, the
 Fast-slow-pointers can be used to detect cycle problem. Left-right-pointers is more ofte used in string and array problem. Sliding-window-pointers can solve most of substring problem. 
 Illustraion for fast-slow-pointers, left-right-pointers, and sliding-window-pointers  
 
-The basic idea for using two pointers:  
-1. initial locations  
-2. move strategy 
-3. exit conditions for iteration  
+The basic idea for using fast and slow pointers:  
+1. initial locations.  
+2. move strategy.  
+3. exit conditions for iteration.    
 
 # Fast-Slow-Pointers
 The two pointers move from the same side. One moves fast, while the other move slow, e.g. the fast pointer move 2 steps each time, and the slow just 1 step. Both pointers move with the different move strategy until the two pointers point to the same element or other exit conditions.
+
+### Solution Templates 
+1. initial locations, usually slow = 0, fast = 1 for the index.  
+2. move strategy, e.g, slow++, fast +=2.  
+3. exit conditions for iteration, in most cases, the fast pointer catch up the slow pointer.    
+
 ### Problem Types
  * detect if a list contians cycle
  * if a list contains cycle, find the start location of the cycle
@@ -24,4 +30,20 @@ The two pointers move from the same side. One moves fast, while the other move s
  * find the middle element in list
  * find the last k element in list
 
+### Problems
+ * 283, 27, 26-80  
 
+# Left-Right-Pointers
+The two pointers stay in different sides of an ordered array, usually one is in left, the other right, that's also the reason why it is called left-right-pointers. The two pointers then start to meet.  
+
+### Solution Templates 
+1. initial locations, usually left = 0, right = length - 1 for the index.  
+2. move strategy, e.g, left++, right--.  
+3. exit conditions for iteration, in most castes, the exit condition is right < left. 
+### Problem Types
+ * part sum in ordered array
+ * reverse array
+### Problems
+ * 167, 125, 344, 345, 11  
+ 
+ 
