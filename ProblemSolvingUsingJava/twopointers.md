@@ -10,7 +10,7 @@ The two pointers in fast-slow-pointers move in the same direction, one fast, the
 Fast-slow-pointers can be used to detect cycle problem. Left-right-pointers is more ofte used in string and array problem. Sliding-window-pointers can solve most of substring problem. 
 Illustraion for fast-slow-pointers, left-right-pointers, and sliding-window-pointers  
 
-The basic idea for using fast and slow pointers:  
+The basic idea for using two pointers:  
 1. initial locations.  
 2. move strategy.  
 3. exit conditions for iteration.    
@@ -39,10 +39,12 @@ The two pointers stay in different sides of an ordered array, usually one is in 
 ### Solution Templates 
 1. initial locations, usually left = 0, right = length - 1 for the index.  
 2. move strategy, e.g, left++, right--.  
-3. exit conditions for iteration, in most castes, the exit condition is right < left. 
+3. exit conditions for iteration, in most castes, the exit condition is right < left.  
+
 ### Problem Types
  * part sum in ordered array
- * reverse array
+ * reverse array  
+ 
 ### Problems
  * 167, 125, 344, 345, 11  
  
