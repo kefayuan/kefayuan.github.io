@@ -61,7 +61,8 @@ Illustraion for sliding-window-pointers
  3. exit conditions for iteration. Right ponter reach the end, iteration finished.
 
 ### Problem Types
- * substring or subarray  
+ * substring or subarray 
+ 
 ### Problems
  * 209, 3, 438, 76
 
