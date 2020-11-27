@@ -162,13 +162,12 @@ public static String minWindow(String s, String t) {
        }
    }
 
-   if (winLength == s.length()+1){
-       // not found the t pattern
-       return "";
-   } else {
-       //found the minimized t pattern
-       return s.substring(start, start+winLength);
-   }
+    boolean founded = winLength <  s.length()+1;
+    if (founded){
+        return s.substring(start, start+winLength);
+    } else {
+        return "";
+    }
 }
 ```
           s="cabwefgewcwaefgcf"  
