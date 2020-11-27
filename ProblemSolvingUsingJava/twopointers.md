@@ -17,6 +17,9 @@ The basic idea for using two pointers:
 
 # Fast-Slow-Pointers
 The two pointers move from the same side. One moves fast, while the other move slow, e.g. the fast pointer move 2 steps each time, and the slow just 1 step. Both pointers move with the different move strategy until the two pointers point to the same element or other exit conditions.  
+Fast-Slow-Pointers is also called "tortoise and the hare algorithm" which was degigned by Robert W. Floyd and used originally to detect cycles in a directed graph. 
+Floyd's Cycle Detection Algorithm(The Tortoise and The Hare)  
+Brent's Cycle Detection Algorithm(The Teleporting Turtle)   
 Illustraion for fast-slow-pointers  
 ### Solution Template 
 1. initial locations, usually slow = 0, fast = 1 for the index.  
@@ -81,7 +84,8 @@ while (right < s.size()) {`
 ### Problems
  * 209, 3, 438, 76
  
-### Problem: Minimum Window Substring (https://leetcode.com/problems/minimum-window-substring/)
+### Problem:
+### [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
 > Given two strings s and t, return the minimum window in s which will contain all the characters in t. If there is no such window in s that covers all characters in t, return the empty string "".  
 > 
 > **Note** that If there is such a window, it is guaranteed that there will always be only one unique minimum window in s.  
@@ -99,6 +103,73 @@ while (right < s.size()) {`
 > * 1 <= s.length, t.length <= 105  
 > * s and t consist of English letters. 
 > 
-> **Follow up:** Could you find an algorithm that runs in O(n) time?
+> **Follow up:** Could you find an algorithm that runs in O(n) time?  
+
+### Analyisis
+Text  
+best practice using hashmap..  
+Ilustration 
+
+
+```java
+    public static String minWindow(String s, String t) {
+        //key:value -> the frequency of char in t
+         Map<Character, Long> tTable = Collections.unmodifiableMap(
+                t.chars().mapToObj(ch -> (char) ch)
+                        .collect(Collectors.groupingBy(Character::valueOf, Collectors.counting()))
+        );
+
+         //key:value -> the frequency of char in window
+        Map<Character, Long> winTable=new HashMap();
+        int winLeft = 0, winRight = 0;
+        int winHits = 0;
+
+        // the start and end index of result in s
+        int start = 0,winLength = s.length()+1; //set any impossible value for default window size
+
+        while (winRight < s.length()) {
+            // rightChar is the next char expanded into window
+            char rightChar = s.charAt(winRight);
+            // expand window
+            winRight++;
+            // if char is valid, record it and update window table
+            if (tTable.containsKey(rightChar)) {
+                winTable.put(rightChar, winTable.getOrDefault(rightChar, 0l) + 1);
+                if (winTable.get(rightChar).equals(tTable.get(rightChar))){
+                    winHits++;
+                }
+            }
+            // t pattern exists in the window, but the window is not minimized yet
+            while (winHits == tTable.size()) {
+                //temporally record the result, it might be the minimized, but not sure.
+               if (winRight - winLeft < winLength) { 
+                   //currently the minimized substring
+                    start = winLeft;
+                    winLength = winRight - winLeft;
+                }
+
+                // leftChar will be deleted from window, which means window move to the left
+                char leftChar = s.charAt(winLeft);
+                // shrink window
+                winLeft++;
+                // try to find update window table
+                if (tTable.containsKey(leftChar)) {
+                    if (winTable.get(leftChar).equals(tTable.get(leftChar)) ){
+                        winHits--;
+                    }
+                    winTable.put(leftChar, winTable.get(leftChar) - 1);
+                }
+            }
+        }
+
+        if (winLength == s.length()+1){
+            // not found the t pattern
+            return "";
+        } else {
+            //found the minimized t pattern 
+            return s.substring(start, start+winLength);
+        }
+    }
+```
  
 
