@@ -112,64 +112,66 @@ Ilustration
 
 
 ```java
-    public static String minWindow(String s, String t) {
-        //key:value -> the frequency of char in t
-         Map<Character, Long> tTable = Collections.unmodifiableMap(
-                t.chars().mapToObj(ch -> (char) ch)
-                        .collect(Collectors.groupingBy(Character::valueOf, Collectors.counting()))
-        );
+public static String minWindow(String s, String t) {
+   //key:value -> the frequency of char in t
+    Map<Character, Long> tTable = Collections.unmodifiableMap(
+           t.chars().mapToObj(ch -> (char) ch)
+                   .collect(Collectors.groupingBy(Character::valueOf, Collectors.counting()))
+   );
 
-         //key:value -> the frequency of char in window
-        Map<Character, Long> winTable=new HashMap();
-        int winLeft = 0, winRight = 0;
-        int winHits = 0;
+    //key:value -> the frequency of char in window
+   Map<Character, Long> winTable=new HashMap();
+   int winLeft = 0, winRight = 0;
+   int winHits = 0;
 
-        // the start and end index of result in s
-        int start = 0,winLength = s.length()+1; //set any impossible value for default window size
+   // the start and end index of result in s
+   int start = 0,winLength = s.length()+1; //set any impossible value for default window size
 
-        while (winRight < s.length()) {
-            // rightChar is the next char expanded into window
-            char rightChar = s.charAt(winRight);
-            // expand window
-            winRight++;
-            // if char is valid, record it and update window table
-            if (tTable.containsKey(rightChar)) {
-                winTable.put(rightChar, winTable.getOrDefault(rightChar, 0l) + 1);
-                if (winTable.get(rightChar).equals(tTable.get(rightChar))){
-                    winHits++;
-                }
-            }
-            // t pattern exists in the window, but the window is not minimized yet
-            while (winHits == tTable.size()) {
-                //temporally record the result, it might be the minimized, but not sure.
-               if (winRight - winLeft < winLength) { 
-                   //currently the minimized substring
-                    start = winLeft;
-                    winLength = winRight - winLeft;
-                }
+   while (winRight < s.length()) {
+       // rightChar is the next char expanded into window
+       char rightChar = s.charAt(winRight);
+       // expand window
+       winRight++;
+       // if char is valid, record it and update window table
+       if (tTable.containsKey(rightChar)) {
+           winTable.put(rightChar, winTable.getOrDefault(rightChar, 0l) + 1);
+           if (winTable.get(rightChar).equals(tTable.get(rightChar))){
+               winHits++;
+           }
+       }
+       // t pattern exists in the window, but the window is not minimized yet
+       while (winHits == tTable.size()) {
+           //temporally record the result, it might be the minimized, but not sure.
+          if (winRight - winLeft < winLength) {
+              //currently the minimized substring
+               start = winLeft;
+               winLength = winRight - winLeft;
+           }
 
-                // leftChar will be deleted from window, which means window move to the left
-                char leftChar = s.charAt(winLeft);
-                // shrink window
-                winLeft++;
-                // try to find update window table
-                if (tTable.containsKey(leftChar)) {
-                    if (winTable.get(leftChar).equals(tTable.get(leftChar)) ){
-                        winHits--;
-                    }
-                    winTable.put(leftChar, winTable.get(leftChar) - 1);
-                }
-            }
-        }
+           // leftChar will be deleted from window, which means window move to the left
+           char leftChar = s.charAt(winLeft);
+           // shrink window
+           winLeft++;
+           // try to find update window table
+           if (tTable.containsKey(leftChar)) {
+               if (winTable.get(leftChar).equals(tTable.get(leftChar)) ){
+                   winHits--;
+               }
+               winTable.put(leftChar, winTable.get(leftChar) - 1);
+           }
+       }
+   }
 
-        if (winLength == s.length()+1){
-            // not found the t pattern
-            return "";
-        } else {
-            //found the minimized t pattern 
-            return s.substring(start, start+winLength);
-        }
-    }
+   if (winLength == s.length()+1){
+       // not found the t pattern
+       return "";
+   } else {
+       //found the minimized t pattern
+       return s.substring(start, start+winLength);
+   }
+}
 ```
- 
+          s="cabwefgewcwaefgcf"  
+          t="cae"  
+          expected="cwae"  
 
