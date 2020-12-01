@@ -88,12 +88,12 @@ public static int trap(int[] height){
     while (left < right){
         if(leftMax < rightMax){
            res += leftMax - height[left];
-           left ++;
+           left++;
            leftMax = max( leftMax ,height[left]);
         }else{
-            res += rightMax - height[right];
-            right --;
-            rightMax = max( rightMax, height[right]) ;
+           res += rightMax - height[right];
+           right--;
+           rightMax = max( rightMax, height[right]);
         }
     }
     return res;
