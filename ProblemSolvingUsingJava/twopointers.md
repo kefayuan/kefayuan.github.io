@@ -51,6 +51,26 @@ Illustraion for  left-right-pointers
  
 ### Problems
  * 167, 125, 344, 345, 11, 633 
+### [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)
+> Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining. 
+> 
+> 
+> **Example 1:**  
+> ![](https://assets.leetcode.com/uploads/2018/10/22/rainwatertrap.png)
+> **Input:** height = [0,1,0,2,1,0,1,3,2,1,2,1]"  
+> **Output:** 6
+> **Explaination:** The above elevation map (black section) is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped.
+> 
+> **Example 2:**  
+> **Input:**  height = [4,2,0,3,2,5]  
+> **Output:**  9 
+> 
+> **Constraints:**
+> * n == height.length  
+> * 0 <= n <= 3 * 104
+> * 0 <= height[i] <= 105
+> 
+ 
  
 # Sliding-Window-Pointers
 Window is a collection of elements defined by start and end index in an array or a string, the start and end index are inclusive range, e.g. for index betwen i and j, [i,j], j-i is called distance. Sliding window slide with the fixed distance. If the window slide 1 element, the window index  range change from [i,j] to [i+1, j+1]. Using sliding window, the double nested loop can be converted into a single layer iteration, which change the 2-dimensional loop to 1-dimensional loop, this means the time complexity can be degraded from O(n<sup>2</sup>) to O(n).  
