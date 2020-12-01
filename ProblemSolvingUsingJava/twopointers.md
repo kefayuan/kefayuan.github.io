@@ -74,7 +74,6 @@ Illustraion for  left-right-pointers
 
 ### Analyisis
 Text  
-best practice using hashmap..  
 Ilustration 
 
 
