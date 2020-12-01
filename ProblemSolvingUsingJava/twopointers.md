@@ -50,7 +50,8 @@ Illustraion for  left-right-pointers
  * binary search
  
 ### Problems
- * 167, 125, 344, 345, 11, 633 
+ * 167, 125, 344, 345, 11, 633  
+ 
 ### [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)  
 > Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining. 
 > 
@@ -69,7 +70,8 @@ Illustraion for  left-right-pointers
 > * n == height.length  
 > * 0 <= n <= 3 * 104
 > * 0 <= height[i] <= 105
-> 
+>  
+
 ### Analyisis
 Text  
 best practice using hashmap..  
