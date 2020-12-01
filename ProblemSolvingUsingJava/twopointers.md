@@ -70,7 +70,35 @@ Illustraion for  left-right-pointers
 > * 0 <= n <= 3 * 104
 > * 0 <= height[i] <= 105
 > 
- 
+### Analyisis
+Text  
+best practice using hashmap..  
+Ilustration 
+
+
+```java
+public static int trap(int[] height){
+        if(Objects.isNull(height)||height.length==0){
+            return 0;
+        }
+        int left=0, right =height.length -1;
+        int leftMax =height[left];
+        int rightMax=height[right];
+        int res = 0;
+        while (left < right){
+            if(leftMax < rightMax){
+               res += leftMax - height[left];
+               left ++;
+               leftMax = max( leftMax ,height[left]);
+            }else{
+                res += rightMax - height[right];
+                right --;
+                rightMax = max( rightMax, height[right]) ;
+            }
+        }
+        return res;
+    }
+```
  
 # Sliding-Window-Pointers
 Window is a collection of elements defined by start and end index in an array or a string, the start and end index are inclusive range, e.g. for index betwen i and j, [i,j], j-i is called distance. Sliding window slide with the fixed distance. If the window slide 1 element, the window index  range change from [i,j] to [i+1, j+1]. Using sliding window, the double nested loop can be converted into a single layer iteration, which change the 2-dimensional loop to 1-dimensional loop, this means the time complexity can be degraded from O(n<sup>2</sup>) to O(n).  
