@@ -51,7 +51,7 @@ Illustraion for  left-right-pointers
  
 ### Problems
  * 167, 125, 344, 345, 11, 633 
-### [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)
+### [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)  
 > Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining. 
 > 
 > 
