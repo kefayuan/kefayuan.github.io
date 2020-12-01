@@ -78,25 +78,25 @@ Ilustration
 
 ```java
 public static int trap(int[] height){
-        if(Objects.isNull(height)||height.length==0){
-            return 0;
+    if(Objects.isNull(height)||height.length==0){
+        return 0;
+    }
+    int left=0, right =height.length -1;
+    int leftMax =height[left];
+    int rightMax=height[right];
+    int res = 0;
+    while (left < right){
+        if(leftMax < rightMax){
+           res += leftMax - height[left];
+           left ++;
+           leftMax = max( leftMax ,height[left]);
+        }else{
+            res += rightMax - height[right];
+            right --;
+            rightMax = max( rightMax, height[right]) ;
         }
-        int left=0, right =height.length -1;
-        int leftMax =height[left];
-        int rightMax=height[right];
-        int res = 0;
-        while (left < right){
-            if(leftMax < rightMax){
-               res += leftMax - height[left];
-               left ++;
-               leftMax = max( leftMax ,height[left]);
-            }else{
-                res += rightMax - height[right];
-                right --;
-                rightMax = max( rightMax, height[right]) ;
-            }
-        }
-        return res;
+    }
+    return res;
     }
 ```
  
